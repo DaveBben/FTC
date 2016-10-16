@@ -43,6 +43,7 @@ function getQuestion(id){
 	
 function defaultDisplay(){
 	document.getElementById('questionOne').innerHTML = getQuestion(0);
+	document.getElementById('containerOne').value = "FUCK YOU";
 	document.getElementById('questionTwo').innerHTML = getQuestion(1);
 }
 	
