@@ -44,7 +44,6 @@ function getQuestion(id){
 function defaultDisplay(){
 	document.getElementById('questionOne').innerHTML = getQuestion(0);
 	document.getElementById('questionTwo').innerHTML = getQuestion(1);
-
 }
 	
 function setSelected(answer){
