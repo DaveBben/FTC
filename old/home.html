@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>questions</title>
+<style>
+body {
+    background-color: linen;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size:24px;
+}
+
+button{
+	margin-left:5px;
+	
+}
+
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+} 
+</style>
+</head>
+
+<body onLoad="defaultDisplay()">
+<div class="quizsection">
+	
+	<h2>Does it take more courage to:</h2>
+	
+	<div class="answer">
+    <input name="question" value="value1" id="op1" type="radio" onClick="setSelected(this.value)"/>
+	<label id="content1" for="op1">Some stuff</label> <br />
+     <input name="question" value="value1" id="op2" type="radio" onClick="setSelected(this.value)"/>
+	<label id="content2" for="op2">Some stuff</label> <br /><br />
+    <button type="button" onClick="display()">Next</button>
+        
+	</div>
+ 
+	
+
+ 
+</div>
+
+
+
+<script type="text/javascript">
+	var a= 'Ask for a promotion or a raise at work';
+	var b = 'Ask someone out on a date';
+	var c = 'Stand up against racism or prejudice';
+	var d= 'Stand up for yourself';
+	var e = 'Make a public presentation about something you believe in';
+	var f ='Make a public presentation about something you know is wrong';
+	var g ='Leave an abusive relationship';
+	var h = 'Leave a loved one behind';
+	var highQ1;
+	var highQ2;
+	var winenrA;
+	var winnerB;
+	var winnerC;
+	var highQ3;
+	var highQ4;
+	
+	var counter = 1;
+	var selected;
+	
+	function defaultDisplay(){
+		document.getElementById('content1').innerHTML = a;
+		document.getElementById('op1').value = a;
+		document.getElementById('content2').innerHTML = b;
+		document.getElementById('op2').value = b;
+	
+	}
+	
+	function setSelected(answer){
+		selected = answer;
+	
+	}
+
+	function display(){
+		switch(counter){
+			case 1:
+				highQ1 = selected;
+				document.getElementById('content1').innerHTML = c;
+				document.getElementById('op1').value = c;
+				document.getElementById('content2').innerHTML = d;
+				document.getElementById('op2').value = d;
+				counter++;
+				break;
+			case 2:
+				highQ2 = selected;
+				document.getElementById('content1').innerHTML = highQ1;
+				document.getElementById('op1').value = highQ1;
+				document.getElementById('content2').innerHTML = highQ2;
+				document.getElementById('op2').value = highQ2;
+				counter++;
+				break;
+			case 3:
+				winnerA = selected;
+				document.getElementById('content1').innerHTML = e;
+				document.getElementById('op1').value = e;
+				document.getElementById('content2').innerHTML = f;
+				document.getElementById('op2').value = f;
+				counter++;
+				break;
+			case 4:
+				highQ3 = selected;
+				document.getElementById('content1').innerHTML = g;
+				document.getElementById('op1').value = g;
+				document.getElementById('content2').innerHTML = h;
+				document.getElementById('op2').value = h;
+				counter++;
+				break;
+			case 5:
+				highQ4 = selected;
+				document.getElementById('content1').innerHTML = highQ3;
+				document.getElementById('op1').value = highQ3;
+				document.getElementById('content2').innerHTML = highQ4;
+				document.getElementById('op2').value = highQ4;
+				counter++;
+				break;
+			case 6:
+				winnerB = selected;
+				document.getElementById('content1').innerHTML = winnerA;
+				document.getElementById('op1').value = winnerA;
+				document.getElementById('content2').innerHTML = winnerB;
+				document.getElementById('op2').value = winnerB;
+				counter++;
+				break;
+			case 7:
+				winnerC = selected;
+				document.write("According to you, it takes the most courage to: " + winnerC);
+				counter++;
+				break;
+			default:
+				break;
+				
+	
+			
+		
+		
+		
+		}
+			document.getElementById('op1').checked = false;
+			document.getElementById('op2').checked = false;
+		
+		
+	}
+  
+ </script>
+</body>
+</html>
