@@ -40,33 +40,61 @@ function getQuestion(id){
 	}
 	
 }
+
+
+function getID(question){
+	if(question = questionOne){
+		return 0;
+	}
+	else if(question = questionTwo){
+		return 1;
+	}
+	else if(question = questionThree){
+		return 2;
+	}
+	else if(question = questionFour){
+		return 3;
+	}
+	else if(question = questionFive){
+		return 4;
+	}
+	else if(question = questionSix){
+		return 5;
+	}
+	else if(question = questionSeven){
+		return 6;
+	}
+	else if(question = questionEight){
+		return 7;
+	}
 	
-function defaultDisplay(){
-	document.getElementById('questionOne').innerHTML = getQuestion(0);
-	document.getElementById('containerOne').value = "FUCK YOU";
-	document.getElementById('questionTwo').innerHTML = getQuestion(1);
-}
 	
-function setSelected(answer){
-	selected = answer;
 }
 
-function display(){
+
+
+	
+function display(idOne,idTwo){
+	document.getElementById('questionOne').innerHTML = getQuestion(idOne);
+	document.getElementById('containerOne').value = getID(getQuestion(idOne));
+	document.getElementById('questionTwo').innerHTML = getQuestion(idTwo);
+	document.getElementById('containterTwo').value = getID(getQuestion(idTwo));
+}
+	
+/**
+passes an ID
+*/
+function display(answer){
+	selected = answer; //ID
 	switch(counter){
 		case 1:
 			highQ1 = selected;
-			document.getElementById('content1').innerHTML = questionThree;
-			document.getElementById('op1').value = questionThree;
-			document.getElementById('content2').innerHTML = questionFour;
-			document.getElementById('op2').value = questionFour;
+			display(2,3);
 			counter++;
 			break;
 		case 2:
 			highQ2 = selected;
-			document.getElementById('content1').innerHTML = highQ1;
-			document.getElementById('op1').value = highQ1;
-			document.getElementById('content2').innerHTML = highQ2;
-			document.getElementById('op2').value = highQ2;
+			display(highQ1,highQ2);
 			counter++;
 			break;
 		case 3:
