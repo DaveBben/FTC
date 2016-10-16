@@ -110,18 +110,11 @@ function change(answer){
 		case 5:
 			highQ4 = selected;
 			display(highQ3,highQ4);
-			document.getElementById('content1').innerHTML = highQ3;
-			document.getElementById('op1').value = highQ3;
-			document.getElementById('content2').innerHTML = highQ4;
-			document.getElementById('op2').value = highQ4;
 			counter++;
 			break;
 		case 6:
 			winnerB = selected;
-			document.getElementById('content1').innerHTML = winnerA;
-			document.getElementById('op1').value = winnerA;
-			document.getElementById('content2').innerHTML = winnerB;
-			document.getElementById('op2').value = winnerB;
+			display(highQ3,highQ4);
 			counter++;
 			break;
 		case 7:
@@ -132,6 +125,5 @@ function change(answer){
 		default:
 			break;	
 	}
-		document.getElementById('op1').checked = false;
-		document.getElementById('op2').checked = false;
+
 }
