@@ -1,5 +1,5 @@
 var questionOne = 'Tell a professor that someone in class is cheating';
-var questionTwo = 'Tell your boyfriend or girlfriend tha tyou no longer want to be a couple';
+var questionTwo = 'Tell your boyfriend or girlfriend that you no longer want to be a couple';
 var questionThree = 'Running into a building on fire to save a child';
 var questionFour = 'Endure debilitating, chronic pain due to cancer';
 var questionFive = 'Forgive a friend who committed a serious wrong against you';
@@ -16,12 +16,35 @@ var highQ4;*/
 	
 var counter = 1;
 var selected;
+
+function getQuestion(id){
+	switch(id){
+		case 0:
+			return questionOne;
+		case 1:
+			return questionTwo;
+		case 2:
+			return questionThree;
+		case 3:
+			return questionFour;
+		case 4:
+			return questionFive;
+		case 5:
+			return questionSix;
+		case 6:
+			return questionSeven;
+		case 7:
+			return questionSeven;
+		default:
+			break;
+	}
+	
+}
 	
 function defaultDisplay(){
-	document.getElementById('content1').innerHTML = questionOne;
-	document.getElementById('op1').value = questionOne;
-	document.getElementById('content2').innerHTML = questionTwo;
-	document.getElementById('op2').value = questionTwo;
+	document.getElementById('questionOne').innerHTML = getQuestion(0);
+	document.getElementById('questionTwo').innerHTML = getQuestion(1);
+
 }
 	
 function setSelected(answer){
