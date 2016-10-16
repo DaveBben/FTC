@@ -7,12 +7,7 @@ var questionSix = 'Tell your conservative parents that you are gay';
 var questionSeven ='Go to an Alcholics Anonymous meeting for the first time';
 var questionEight = 'Confront a friend who you know is stealing money from housemate';
 var highQ1, highQ2, highQ3, highQ4;
-//var highQ2;
 var winenrA, winnerB, winnerC;
-/*var winnerB;
-var winnerC;
-var highQ3;
-var highQ4;*/
 	
 var counter = 1;
 var selected;
