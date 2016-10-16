@@ -99,22 +99,17 @@ function change(answer){
 			break;
 		case 3:
 			winnerA = selected;
-			document.getElementById('content1').innerHTML = questionFive;
-			document.getElementById('op1').value = questionFive;
-			document.getElementById('content2').innerHTML = questionSix;
-			document.getElementById('op2').value = questionSix;
+			display(4,5);
 			counter++;
 			break;
 		case 4:
 			highQ3 = selected;
-			document.getElementById('content1').innerHTML = questionSeven;
-			document.getElementById('op1').value = questionSeven;
-			document.getElementById('content2').innerHTML = questionEight;
-			document.getElementById('op2').value = questionEight;
+			display(6,7);
 			counter++;
 			break;
 		case 5:
 			highQ4 = selected;
+			display(highQ3,highQ4);
 			document.getElementById('content1').innerHTML = highQ3;
 			document.getElementById('op1').value = highQ3;
 			document.getElementById('content2').innerHTML = highQ4;
