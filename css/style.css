@@ -1,6 +1,6 @@
 /** CSS style Sheet for FTC hehe **/
 body {
-    background-color: lightblue;
+    background-color: yellow;
 }
 
 div{
@@ -15,8 +15,8 @@ div{
 }
 
 #MainDiv{
-	border: 1px lightblue;
-	background-color: lightblue;
+	border: 1px yellow;
+	background-color: yellow;
 	position: absolute;
 	top: 50%;
 	left: 50%;
