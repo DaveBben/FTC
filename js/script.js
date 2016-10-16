@@ -84,7 +84,7 @@ function display(idOne,idTwo){
 /**
 passes an ID
 */
-function display(answer){
+function change(answer){
 	selected = answer; //ID
 	switch(counter){
 		case 1:
