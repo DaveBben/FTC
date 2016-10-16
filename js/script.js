@@ -34,7 +34,7 @@ function getQuestion(id){
 		case 6:
 			return questionSeven;
 		case 7:
-			return questionSeven;
+			return questionEight;
 		default:
 			break;
 	}
@@ -43,28 +43,28 @@ function getQuestion(id){
 
 
 function getID(question){
-	if(question = questionOne){
+	if(question == questionOne){
 		return 0;
 	}
-	else if(question = questionTwo){
+	else if(question == questionTwo){
 		return 1;
 	}
-	else if(question = questionThree){
+	else if(question == questionThree){
 		return 2;
 	}
-	else if(question = questionFour){
+	else if(question == questionFour){
 		return 3;
 	}
-	else if(question = questionFive){
+	else if(question == questionFive){
 		return 4;
 	}
-	else if(question = questionSix){
+	else if(question == questionSix){
 		return 5;
 	}
-	else if(question = questionSeven){
+	else if(question == questionSeven){
 		return 6;
 	}
-	else if(question = questionEight){
+	else if(question == questionEight){
 		return 7;
 	}
 	
@@ -114,12 +114,12 @@ function change(answer){
 			break;
 		case 6:
 			winnerB = selected;
-			display(highQ3,highQ4);
+			display(winnerA,winnerB);
 			counter++;
 			break;
 		case 7:
 			winnerC = selected;
-			document.write("According to you, it takes the most courage to: " + winnerC);
+			document.write("According to you, it takes the most courage to: " + getQuestion(winnerC));
 			counter++;
 			break;
 		default:
