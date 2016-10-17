@@ -36,7 +36,6 @@ function getQuestion(id){
 	
 }
 
-
 function getID(question){
 	if(question == questionOne){
 		return 0;
@@ -65,9 +64,6 @@ function getID(question){
 	
 	
 }
-
-
-
 	
 function display(idOne,idTwo){
 	document.getElementById('questionOne').innerHTML = getQuestion(idOne);
@@ -120,5 +116,4 @@ function change(answer){
 		default:
 			break;	
 	}
-
 }
