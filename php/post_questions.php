@@ -1,15 +1,22 @@
 <?php
- 
-$servername = "localhost";
-$username = "movieboy_trainer";
-$password = "0KF!vgBLp6";
-$dbname = "movieboy_pokemon";
- 
- 
-// check for post data (using  isempty to make sure the value isn't empty)
-if (isset($_POST['id'])){
-    $id = $_POST['id'];
-	$link = mysqli_connect(servername,username,password,dbname);
-	mysqli_query($link,"INSERT INTO Questions (`id`) VALUES ($id)") 
-}
-?>
+
+	 include "db_config.php";
+	 if(isset($_POST['id'])){
+		 $id=$_POST['id'];
+		 $question = $_POST['question'];
+		 $ip = $_SERVER['REMOTE_ADDR'];
+		 $date = date('m/d/Y h:i:s a');
+		 if($id >= 0 and $id <= 7){
+		 
+		 $q=mysqli_query($con,"INSERT INTO `Questions` (`id`,`ip`,`date`) VALUES ('$id','$ip','$date')");
+		 if($q)
+		  echo "<H2>Thank you. Your result for the survey has been recorded.<br> It takes most courage to: $question</H2>";
+		 else
+		  echo "<H2>Something went wrong</H2>";
+		 }
+		 else{
+			 echo "<H2>Something went wrong</H2>";
+		 }
+	 }
+	 
+ ?>

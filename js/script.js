@@ -111,17 +111,17 @@ function change(answer){
 			break;
 		case 7:
 			winnerC = selected;
-			toServer();
+			toServer(getQuestion(winnerC));
 			break;
 		default:
 			break;	
 	}
 }
 
-function toServer(){
+function toServer(q){
 	$.ajax({
   url: "/ftc/php/post_questions.php",
-  data: { id: "winnerC"},
+  data: { id: winnerC, question: q},
   type: "POST",
   context: document.body
 }).done(function(response) {
