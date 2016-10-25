@@ -111,12 +111,24 @@ function change(answer){
 			break;
 		case 7:
 			winnerC = selected;
-			document.write("According to you, it takes the most courage to: " + getQuestion(winnerC));
-			counter++;
+			toServer();
 			break;
 		default:
 			break;	
 	}
+}
+
+function toServer(){
+	$.ajax({
+  url: "/ftc/php/post_questions.php",
+  data: { id: "winnerC"},
+  type: "POST",
+  context: document.body
+}).done(function(response) {
+  document.write(response);
+});
+	
+	
 }
 
 
